@@ -1,0 +1,132 @@
+@import "_nav";
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  //   height: 100vh;
+  //   padding: 40px 0;
+  //   margin-top: 5px;
+  //   background: linear-gradient(rgb(241, 241, 211));
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  // background-image: url("../images/1616019682192new.jpeg");
+
+  // border-radius: 1%;
+  // border: 1px solid #333;
+  // box-shadow: 1px 1px 10px #333, -1px -1px 10px #333;
+  .imgHeader {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    // background-position: center;
+    object-fit: cover;
+    // background-repeat: no-repeat;
+    animation: picture 10s linear infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    // animation: picture 10s linear infinite;
+  }
+
+  .headerTxt {
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 300px;
+    animation: text 2s linear 0.5s both;
+    // margin-right: 0;
+    // margin-bottom: 10%;
+    z-index: 9999;
+    .hrLine {
+      margin-bottom: 20px;
+      background-color: $mainColor;
+      width: 50px;
+      height: 4px;
+      border: none;
+    }
+
+    h1,
+    h2 {
+      font-family: "Fjalla One";
+      border: 1px, solid #333;
+      // -webkit-text-stroke: 1px black;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    h1 {
+      color: $mainColor;
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 50px;
+      color: rgb(236, 232, 230);
+      line-height: 70px;
+      margin-bottom: 30px;
+    }
+    .headerContactBtn {
+      height: 15%;
+      width: 35%;
+      font-size: 17px;
+      font-family: "roboto";
+      font-weight: 700;
+      text-transform: uppercase;
+      color: rgb(236, 232, 230);
+      background-color: transparent;
+      border: 2px solid rgb(236, 232, 230);
+      border-radius: 25px 25px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: rgb(236, 232, 230);
+        color: $mainColor;
+        // border: 2px solid $mainColor;
+      }
+    }
+  }
+}
+@keyframes picture {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
