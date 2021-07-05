@@ -3,11 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  //   height: 100vh;
-  //   padding: 40px 0;
-  //   margin-top: 5px;
-  //   background: linear-gradient(rgb(241, 241, 211));
 }
 
 header {
@@ -16,21 +11,14 @@ header {
   justify-content: center;
   height: 100vh;
   width: 100%;
-  position: relative;
   top: 0;
   left: 0;
-  // background-image: url("../images/1616019682192new.jpeg");
 
-  // border-radius: 1%;
-  // border: 1px solid #333;
-  // box-shadow: 1px 1px 10px #333, -1px -1px 10px #333;
   .imgHeader {
     position: absolute;
     width: 100%;
     height: 100vh;
-    // background-position: center;
     object-fit: cover;
-    // background-repeat: no-repeat;
     animation: picture 10s linear infinite;
   }
 
@@ -41,19 +29,17 @@ header {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    // animation: picture 10s linear infinite;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .headerTxt {
-    // position: relative;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     width: 600px;
-    height: 300px;
+    height: 80%;
     animation: text 2s linear 0.5s both;
-    // margin-right: 0;
-    // margin-bottom: 10%;
     z-index: 9999;
     .hrLine {
       margin-bottom: 20px;
@@ -64,10 +50,10 @@ header {
     }
 
     h1,
-    h2 {
+    h2,
+    h3 {
       font-family: "Fjalla One";
       border: 1px, solid #333;
-      // -webkit-text-stroke: 1px black;
       letter-spacing: 2px;
       text-transform: uppercase;
       text-align: left;
@@ -80,29 +66,32 @@ header {
     }
 
     h2 {
-      font-size: 50px;
+      font-size: 55px;
       color: rgb(236, 232, 230);
       line-height: 70px;
       margin-bottom: 30px;
     }
+    h3 {
+      font-size: 30px;
+      color: rgb(236, 232, 230);
+      margin-bottom: 30px;
+    }
     .headerContactBtn {
-      height: 15%;
-      width: 35%;
+      padding: 10px 60px;
       font-size: 17px;
       font-family: "roboto";
       font-weight: 700;
       text-transform: uppercase;
+      text-decoration: none;
       color: rgb(236, 232, 230);
       background-color: transparent;
       border: 2px solid rgb(236, 232, 230);
       border-radius: 25px 25px;
       cursor: pointer;
       transition: 0.3s;
-
       &:hover {
         background-color: rgb(236, 232, 230);
         color: $mainColor;
-        // border: 2px solid $mainColor;
       }
     }
   }
@@ -128,5 +117,55 @@ header {
   }
   100% {
     opacity: 1;
+  }
+}
+@media (max-width: 1024px) {
+  header {
+    .headerTxt {
+      align-items: center;
+
+      h1 {
+        font-size: 25px;
+        text-align: center;
+      }
+      h2 {
+        font-size: 45px;
+        text-align: center;
+      }
+      h3 {
+        font-size: 25px;
+        text-align: center;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  header {
+    .headerTxt {
+      h1 {
+        font-size: 20px;
+      }
+      h2 {
+        font-size: 38px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  header {
+    .headerTxt {
+      h1 {
+        font-size: 25px;
+      }
+      h2 {
+        font-size: 30px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+    }
   }
 }

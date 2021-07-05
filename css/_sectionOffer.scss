@@ -1,0 +1,57 @@
+.s2 {
+  .offerContent {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+
+    .row {
+      width: 25%;
+    }
+  }
+  .hrLine {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .circle {
+    margin: 20px auto;
+    text-align: center;
+
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: $mainColor;
+    span {
+      line-height: 40px;
+      color: white;
+      font-size: 30px;
+    }
+  }
+  h1 {
+    font-size: 50px;
+
+    line-height: 70px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Fjalla One";
+  }
+  h2 {
+    font-size: 18px;
+  }
+  p {
+    margin: 10px 0 20px;
+    text-align: center;
+    font-family: "mulish";
+    font-size: 18px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  s2 {
+    width: 90%;
+    .offerContent {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
