@@ -1,5 +1,5 @@
 .s3 {
-  margin: 0 auto 20px;
+  margin: 0 auto 50px;
   position: relative;
   text-align: center;
   background: rgba(0, 0, 0, 0.85);
@@ -37,7 +37,7 @@
   }
 
   p {
-    margin: 30px 100px;
+    margin: 20px 60px;
     font-size: 18x;
     font-family: "mulish";
     letter-spacing: 2px;
@@ -61,7 +61,7 @@
       line-height: 35px;
     }
     p {
-      margin: 20px 70px;
+      margin: 10px 50px;
       font-size: 16x;
     }
   }
@@ -78,10 +78,16 @@
       line-height: 32px;
     }
     p {
-      margin: 10px 45px;
+      margin: 10px 15px;
       font-size: 14x;
     }
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+  .s3 {
+    p {
+      margin: 20px 0px;
+      font-size: 14x;
+    }
+  }
 }

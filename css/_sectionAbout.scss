@@ -73,7 +73,7 @@
         top: 0;
         left: 0;
         right: 0;
-        margin: 25px 15px 0 15px;
+        margin: 20px 12px 0 12px;
         font-size: 22px;
         color: white;
         // transition-delay: 0.1s;
@@ -83,7 +83,7 @@
       .textAbout {
         display: block;
         font-size: 15px;
-        margin: 10px 15px;
+        margin: 10px 12px;
         line-height: 22px;
         font-family: "mulish";
         text-align: center;
@@ -95,7 +95,7 @@
         align-self: center;
         visibility: hidden;
         padding: 9px 15px;
-        font-size: 18x;
+        font-size: 18px;
         margin: 0 auto;
         color: white;
         display: block;
@@ -163,11 +163,28 @@
     }
   }
 }
+@media (max-width: 1350px) {
+  .s1 {
+    width: 90%;
+    .infoTxt {
+      h2 {
+        font-size: 40px;
+        line-height: 50px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
 @media (max-width: 1024px) {
   .s1 {
     flex-direction: column;
     text-align: center;
-    width: 90%;
+    width: 85%;
 
     .hrLine {
       margin-left: auto;
@@ -190,12 +207,14 @@
     }
   }
 }
+
 @media (max-width: 800px) {
   .s1 {
+    width: 90%;
     .infoTxt {
       h2 {
-        font-size: 38px;
-        line-height: 50px;
+        font-size: 35px;
+        line-height: 40px;
       }
       h1 {
         font-size: 24px;
@@ -203,18 +222,13 @@
     }
   }
 }
-@media (max-width: 800px) {
-  .s1 {
-    .infoTxt {
-      h2 {
-        font-size: 35px;
-        line-height: 40px;
-      }
-    }
-  }
-}
 @media (max-width: 600px) {
   .s1 {
+    .infoTxt {
+      p {
+        font-size: 16px;
+      }
+    }
     .imgAboutWrapper {
       .imgAbout {
         margin-top: 25px;

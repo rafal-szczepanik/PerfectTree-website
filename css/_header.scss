@@ -132,15 +132,16 @@ header {
       align-items: center;
 
       h1 {
-        font-size: 25px;
+        font-size: 35px;
         text-align: center;
       }
       h2 {
-        font-size: 45px;
+        font-size: 40px;
+        line-height: 60px;
         text-align: center;
       }
       h3 {
-        font-size: 25px;
+        font-size: 30px;
         text-align: center;
       }
     }
@@ -150,13 +151,14 @@ header {
   header {
     .headerTxt {
       h1 {
-        font-size: 20px;
+        font-size: 30px;
       }
       h2 {
-        font-size: 38px;
+        font-size: 35px;
+        line-height: 55px;
       }
       h3 {
-        font-size: 20px;
+        font-size: 25px;
       }
     }
   }
@@ -165,13 +167,14 @@ header {
   header {
     .headerTxt {
       h1 {
-        font-size: 25px;
-      }
-      h2 {
         font-size: 30px;
       }
+      h2 {
+        font-size: 35px;
+        // line-height: 50px;
+      }
       h3 {
-        font-size: 18px;
+        font-size: 22px;
       }
     }
   }

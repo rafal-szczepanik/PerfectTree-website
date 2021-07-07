@@ -44,6 +44,7 @@ nav {
 .navWrapper {
   display: flex;
   flex-wrap: wrap;
+  padding: 5px 0;
   align-items: center;
   justify-content: space-between;
   transition: 0.4s;
@@ -114,12 +115,12 @@ nav {
     }
   }
   .navWrapper {
-    padding: 0 50px;
+    padding: 5px 50px 5px 25px;
     transition: 0.3s;
 
     .activeImg {
       margin-left: 0;
-      width: 200px;
+      width: 250px;
     }
   }
   .nav-list {
@@ -156,7 +157,7 @@ nav {
   }
   .navWrapper {
     .activeImg {
-      width: 150px;
+      width: 200px;
     }
   }
 }

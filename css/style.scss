@@ -20,7 +20,7 @@ body {
 }
 .sections {
   min-height: 100vh;
-  margin: 0px auto;
+  margin: 0px auto 50px;
   padding: 110px 25px 0 25px;
   width: 80%;
   .hrLine {
@@ -29,6 +29,11 @@ body {
     width: 50px;
     height: 5px;
     border: none;
+  }
+}
+@media (max-width: 1024px) {
+  .sections {
+    padding: 70px 25px 0 25px;
   }
 }
 

@@ -3,9 +3,13 @@
     display: flex;
     justify-content: space-evenly;
     text-align: center;
+    padding-bottom: 20px;
 
     .row {
       width: 25%;
+      .txt {
+        width: 100%;
+      }
     }
   }
   .hrLine {
@@ -34,7 +38,11 @@
     text-transform: uppercase;
   }
   h2 {
+    margin: 0 auto;
+    max-width: 200px;
     font-size: 18px;
+    font-family: "oswald";
+    font-weight: 400;
   }
   p {
     margin: 10px 0 20px;
@@ -45,12 +53,31 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
   .s2 {
     width: 90%;
+    h1 {
+      font-size: 35px;
+    }
     .offerContent {
       flex-direction: column;
       align-items: center;
+
+      .row {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .s2 {
+    h1 {
+      font-size: 30px;
+      line-height: 45px;
+    }
+    p {
+      font-size: 16px;
     }
   }
 }

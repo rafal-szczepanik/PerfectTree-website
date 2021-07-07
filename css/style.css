@@ -20,7 +20,7 @@ body {
 
 .sections {
   min-height: 100vh;
-  margin: 0px auto;
+  margin: 0px auto 50px;
   padding: 110px 25px 0 25px;
   width: 80%;
 }
@@ -31,6 +31,12 @@ body {
   width: 50px;
   height: 5px;
   border: none;
+}
+
+@media (max-width: 1024px) {
+  .sections {
+    padding: 70px 25px 0 25px;
+  }
 }
 
 div.wrapper {
@@ -94,6 +100,7 @@ nav {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 5px 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -180,13 +187,13 @@ nav {
     text-align: center;
   }
   .navWrapper {
-    padding: 0 50px;
+    padding: 5px 50px 5px 25px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
   .navWrapper .activeImg {
     margin-left: 0;
-    width: 200px;
+    width: 250px;
   }
   .nav-list {
     display: none;
@@ -229,7 +236,7 @@ nav {
     display: none;
   }
   .navWrapper .activeImg {
-    width: 150px;
+    width: 200px;
   }
 }
 
@@ -459,40 +466,42 @@ header .headerTxt .headerContactBtn:hover {
             align-items: center;
   }
   header .headerTxt h1 {
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
   }
   header .headerTxt h2 {
-    font-size: 45px;
+    font-size: 40px;
+    line-height: 60px;
     text-align: center;
   }
   header .headerTxt h3 {
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
   }
 }
 
 @media (max-width: 800px) {
   header .headerTxt h1 {
-    font-size: 20px;
+    font-size: 30px;
   }
   header .headerTxt h2 {
-    font-size: 38px;
+    font-size: 35px;
+    line-height: 55px;
   }
   header .headerTxt h3 {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 
 @media (max-width: 500px) {
   header .headerTxt h1 {
-    font-size: 25px;
-  }
-  header .headerTxt h2 {
     font-size: 30px;
   }
+  header .headerTxt h2 {
+    font-size: 35px;
+  }
   header .headerTxt h3 {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 
@@ -596,7 +605,7 @@ header .headerTxt .headerContactBtn:hover {
   top: 0;
   left: 0;
   right: 0;
-  margin: 25px 15px 0 15px;
+  margin: 20px 12px 0 12px;
   font-size: 22px;
   color: white;
   text-transform: uppercase;
@@ -605,7 +614,7 @@ header .headerTxt .headerContactBtn:hover {
 .s1 .imgAboutWrapper .imgAbout .textAbout {
   display: block;
   font-size: 15px;
-  margin: 10px 15px;
+  margin: 10px 12px;
   line-height: 22px;
   font-family: "mulish";
   text-align: center;
@@ -619,7 +628,7 @@ header .headerTxt .headerContactBtn:hover {
       align-self: center;
   visibility: hidden;
   padding: 9px 15px;
-  font-size: 18x;
+  font-size: 18px;
   margin: 0 auto;
   color: white;
   display: block;
@@ -695,6 +704,22 @@ header .headerTxt .headerContactBtn:hover {
   visibility: visible;
 }
 
+@media (max-width: 1350px) {
+  .s1 {
+    width: 90%;
+  }
+  .s1 .infoTxt h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .s1 .infoTxt h1 {
+    font-size: 20px;
+  }
+  .s1 .infoTxt p {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 1024px) {
   .s1 {
     -webkit-box-orient: vertical;
@@ -702,7 +727,7 @@ header .headerTxt .headerContactBtn:hover {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
-    width: 90%;
+    width: 85%;
   }
   .s1 .hrLine {
     margin-left: auto;
@@ -726,23 +751,22 @@ header .headerTxt .headerContactBtn:hover {
 }
 
 @media (max-width: 800px) {
+  .s1 {
+    width: 90%;
+  }
   .s1 .infoTxt h2 {
-    font-size: 38px;
-    line-height: 50px;
+    font-size: 35px;
+    line-height: 40px;
   }
   .s1 .infoTxt h1 {
     font-size: 24px;
   }
 }
 
-@media (max-width: 800px) {
-  .s1 .infoTxt h2 {
-    font-size: 35px;
-    line-height: 40px;
-  }
-}
-
 @media (max-width: 600px) {
+  .s1 .infoTxt p {
+    font-size: 16px;
+  }
   .s1 .imgAboutWrapper .imgAbout {
     margin-top: 25px;
   }
@@ -756,10 +780,15 @@ header .headerTxt .headerContactBtn:hover {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .s2 .offerContent .row {
   width: 25%;
+}
+
+.s2 .offerContent .row .txt {
+  width: 100%;
 }
 
 .s2 .hrLine {
@@ -790,7 +819,11 @@ header .headerTxt .headerContactBtn:hover {
 }
 
 .s2 h2 {
+  margin: 0 auto;
+  max-width: 200px;
   font-size: 18px;
+  font-family: "oswald";
+  font-weight: 400;
 }
 
 .s2 p {
@@ -801,9 +834,12 @@ header .headerTxt .headerContactBtn:hover {
   line-height: 40px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
   .s2 {
     width: 90%;
+  }
+  .s2 h1 {
+    font-size: 35px;
   }
   .s2 .offerContent {
     -webkit-box-orient: vertical;
@@ -814,10 +850,23 @@ header .headerTxt .headerContactBtn:hover {
         -ms-flex-align: center;
             align-items: center;
   }
+  .s2 .offerContent .row {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .s2 h1 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .s2 p {
+    font-size: 16px;
+  }
 }
 
 .s3 {
-  margin: 0 auto 20px;
+  margin: 0 auto 50px;
   position: relative;
   text-align: center;
   background: rgba(0, 0, 0, 0.85);
@@ -859,7 +908,7 @@ header .headerTxt .headerContactBtn:hover {
 }
 
 .s3 p {
-  margin: 30px 100px;
+  margin: 20px 60px;
   font-size: 18x;
   font-family: "mulish";
   letter-spacing: 2px;
@@ -883,7 +932,7 @@ header .headerTxt .headerContactBtn:hover {
     line-height: 35px;
   }
   .s3 p {
-    margin: 20px 70px;
+    margin: 10px 50px;
     font-size: 16x;
   }
 }
@@ -901,7 +950,14 @@ header .headerTxt .headerContactBtn:hover {
     line-height: 32px;
   }
   .s3 p {
-    margin: 10px 45px;
+    margin: 10px 15px;
+    font-size: 14x;
+  }
+}
+
+@media (max-width: 500px) {
+  .s3 p {
+    margin: 20px 0px;
     font-size: 14x;
   }
 }
@@ -1044,7 +1100,7 @@ header .headerTxt .headerContactBtn:hover {
     width: 80%;
   }
   .s4 main h1 {
-    font-size: 27px;
+    font-size: 30px;
     line-height: 50px;
   }
   .s4 aside {
@@ -1060,8 +1116,7 @@ header .headerTxt .headerContactBtn:hover {
 
 @media (max-width: 500px) {
   .s4 main h1 {
-    font-size: 20px;
-    line-height: 35px;
+    line-height: 40px;
   }
   .s4 aside {
     width: 90%;
@@ -1085,13 +1140,6 @@ footer {
   background-color: #000;
   text-align: right;
   letter-spacing: 1px;
-}
-
-footer div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 30px;
 }
 
 @media (max-width: 500px) {
