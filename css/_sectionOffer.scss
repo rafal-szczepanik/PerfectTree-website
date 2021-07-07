@@ -32,7 +32,6 @@
     line-height: 70px;
     text-align: center;
     text-transform: uppercase;
-    font-family: "Fjalla One";
   }
   h2 {
     font-size: 18px;
@@ -46,8 +45,8 @@
   }
 }
 
-@media (max-width: 700px) {
-  s2 {
+@media (max-width: 800px) {
+  .s2 {
     width: 90%;
     .offerContent {
       flex-direction: column;

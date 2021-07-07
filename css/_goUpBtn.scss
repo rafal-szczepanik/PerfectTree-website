@@ -1,0 +1,14 @@
+.goUp {
+  position: fixed;
+  visibility: hidden;
+  font-size: 15x;
+  bottom: 35px;
+  right: 35px;
+  color: rgb(1, 16, 1);
+  opacity: 0.1;
+  z-index: 9999;
+  cursor: pointer;
+}
+.goUpActive {
+  visibility: visible;
+}

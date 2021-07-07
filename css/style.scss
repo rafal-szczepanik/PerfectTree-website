@@ -6,6 +6,12 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+* h1,
+* h2,
+* h3 {
+  font-family: "Oswald";
+  font-weight: 500;
+}
 
 body {
   // padding-top: $nav-paddind;
@@ -15,8 +21,8 @@ body {
 .sections {
   min-height: 100vh;
   margin: 0px auto;
-  padding-top: 110px;
-  width: 70%;
+  padding: 110px 25px 0 25px;
+  width: 80%;
   .hrLine {
     margin-bottom: 20px;
     background-color: $mainColor;
@@ -24,20 +30,6 @@ body {
     height: 5px;
     border: none;
   }
-}
-.goUp {
-  position: fixed;
-  visibility: hidden;
-  font-size: 15x;
-  bottom: 35px;
-  right: 35px;
-  color: rgb(1, 16, 1);
-  opacity: 0.1;
-  z-index: 9999;
-  cursor: pointer;
-}
-.goUpActive {
-  visibility: visible;
 }
 
 @import "wrapper";
@@ -47,3 +39,4 @@ body {
 @import "sectionLaw";
 @import "sectionContact";
 @import "footer";
+@import "goUpBtn";

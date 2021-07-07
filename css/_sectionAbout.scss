@@ -15,7 +15,6 @@
 
     h1,
     h2 {
-      font-family: "Fjalla One";
       border: 1px, solid #333;
       letter-spacing: 2px;
       text-transform: uppercase;
@@ -47,25 +46,26 @@
     flex-wrap: wrap;
     margin-top: 30px;
     width: 60%;
-    height: 650px;
+    height: 100%;
 
     .imgAbout {
+      margin-top: 40px;
       overflow: hidden;
       position: relative;
-      height: 47%;
-      width: 45%;
+      width: 40%;
 
       .images {
+        position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
         width: 100%;
         height: 100%;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        transition: 0.3s;
+        // transition-delay: 0.1s;
+        transition: 0.5s;
       }
       .headerAbout {
         text-align: center;
@@ -73,33 +73,37 @@
         top: 0;
         left: 0;
         right: 0;
-        font-family: "Fjalla One";
         margin: 25px 15px 0 15px;
-        font-size: 25px;
+        font-size: 22px;
         color: white;
+        // transition-delay: 0.1s;
+
         text-transform: uppercase;
       }
       .textAbout {
         display: block;
-        font-size: 16px;
-        margin: 10px 25px;
-        line-height: 25px;
+        font-size: 15px;
+        margin: 10px 15px;
+        line-height: 22px;
         font-family: "mulish";
         text-align: center;
         visibility: hidden;
         color: white;
+        // transition-delay: 0.1s;
       }
       .newBtn {
         align-self: center;
         visibility: hidden;
         padding: 9px 15px;
-        font-size: 20px;
+        font-size: 18x;
         margin: 0 auto;
         color: white;
         display: block;
         background-color: transparent;
         border: 2px solid white;
         border-radius: 25px 25px;
+        // transition-delay: 0.1s;
+        transition: 0.2s;
         cursor: pointer;
       }
 
@@ -120,20 +124,33 @@
       .imgFour {
         background-image: url("../images/snow-3146420_1920.jpg");
       }
-      .images:hover::after {
+      .images::after {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         height: 100%;
         width: 100%;
-        background: rgba(24, 49, 13, 0.8);
+        opacity: 0;
+        -webkit-transition: all 250ms;
+        transition: all 250ms;
         z-index: -1;
+      }
+      .images:hover::after {
+        background: rgba(24, 49, 13, 0.8);
+        opacity: 1;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
       }
 
       .images:hover {
         transform: scale(1.05);
       }
+    }
+    .imgAbout:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
     }
     .imgAbout:hover .headerAbout {
       visibility: visible;
@@ -192,6 +209,15 @@
       h2 {
         font-size: 35px;
         line-height: 40px;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .s1 {
+    .imgAboutWrapper {
+      .imgAbout {
+        margin-top: 25px;
       }
     }
   }

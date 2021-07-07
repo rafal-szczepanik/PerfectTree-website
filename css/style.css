@@ -6,6 +6,13 @@
   scroll-behavior: smooth;
 }
 
+* h1,
+* h2,
+* h3 {
+  font-family: "Oswald";
+  font-weight: 500;
+}
+
 body {
   min-height: 300vh;
   font-family: "mulish", "arial", sans-serif;
@@ -14,8 +21,8 @@ body {
 .sections {
   min-height: 100vh;
   margin: 0px auto;
-  padding-top: 110px;
-  width: 70%;
+  padding: 110px 25px 0 25px;
+  width: 80%;
 }
 
 .sections .hrLine {
@@ -24,22 +31,6 @@ body {
   width: 50px;
   height: 5px;
   border: none;
-}
-
-.goUp {
-  position: fixed;
-  visibility: hidden;
-  font-size: 15x;
-  bottom: 35px;
-  right: 35px;
-  color: #011001;
-  opacity: 0.1;
-  z-index: 9999;
-  cursor: pointer;
-}
-
-.goUpActive {
-  visibility: visible;
 }
 
 div.wrapper {
@@ -168,7 +159,7 @@ nav {
   font-size: 15px;
   padding: 0 0 5px;
   text-decoration: none;
-  color: #f2f0d5;
+  color: #e6e5db;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
@@ -308,6 +299,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 25px;
   height: 100vh;
   width: 100%;
   top: 0;
@@ -366,7 +358,6 @@ header .headerTxt .hrLine {
 header .headerTxt h1,
 header .headerTxt h2,
 header .headerTxt h3 {
-  font-family: "Fjalla One";
   border: 1px, solid #333;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -417,10 +408,10 @@ header .headerTxt .headerContactBtn:hover {
   0% {
     opacity: 0;
   }
-  10% {
+  13% {
     opacity: 1;
   }
-  90% {
+  87% {
     opacity: 1;
   }
   100% {
@@ -432,10 +423,10 @@ header .headerTxt .headerContactBtn:hover {
   0% {
     opacity: 0;
   }
-  10% {
+  13% {
     opacity: 1;
   }
-  90% {
+  87% {
     opacity: 1;
   }
   100% {
@@ -529,7 +520,6 @@ header .headerTxt .headerContactBtn:hover {
 
 .s1 .infoTxt h1,
 .s1 .infoTxt h2 {
-  font-family: "Fjalla One";
   border: 1px, solid #333;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -569,17 +559,18 @@ header .headerTxt .headerContactBtn:hover {
       flex-wrap: wrap;
   margin-top: 30px;
   width: 60%;
-  height: 650px;
+  height: 100%;
 }
 
 .s1 .imgAboutWrapper .imgAbout {
+  margin-top: 40px;
   overflow: hidden;
   position: relative;
-  height: 47%;
-  width: 45%;
+  width: 40%;
 }
 
 .s1 .imgAboutWrapper .imgAbout .images {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -595,8 +586,8 @@ header .headerTxt .headerContactBtn:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .s1 .imgAboutWrapper .imgAbout .headerAbout {
@@ -605,18 +596,17 @@ header .headerTxt .headerContactBtn:hover {
   top: 0;
   left: 0;
   right: 0;
-  font-family: "Fjalla One";
   margin: 25px 15px 0 15px;
-  font-size: 25px;
+  font-size: 22px;
   color: white;
   text-transform: uppercase;
 }
 
 .s1 .imgAboutWrapper .imgAbout .textAbout {
   display: block;
-  font-size: 16px;
-  margin: 10px 25px;
-  line-height: 25px;
+  font-size: 15px;
+  margin: 10px 15px;
+  line-height: 22px;
   font-family: "mulish";
   text-align: center;
   visibility: hidden;
@@ -629,13 +619,15 @@ header .headerTxt .headerContactBtn:hover {
       align-self: center;
   visibility: hidden;
   padding: 9px 15px;
-  font-size: 20px;
+  font-size: 18x;
   margin: 0 auto;
   color: white;
   display: block;
   background-color: transparent;
   border: 2px solid white;
   border-radius: 25px 25px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   cursor: pointer;
 }
 
@@ -660,20 +652,35 @@ header .headerTxt .headerContactBtn:hover {
   background-image: url("../images/snow-3146420_1920.jpg");
 }
 
-.s1 .imgAboutWrapper .imgAbout .images:hover::after {
+.s1 .imgAboutWrapper .imgAbout .images::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(24, 49, 13, 0.8);
+  opacity: 0;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
   z-index: -1;
+}
+
+.s1 .imgAboutWrapper .imgAbout .images:hover::after {
+  background: rgba(24, 49, 13, 0.8);
+  opacity: 1;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .s1 .imgAboutWrapper .imgAbout .images:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+.s1 .imgAboutWrapper .imgAbout:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 
 .s1 .imgAboutWrapper .imgAbout:hover .headerAbout {
@@ -735,6 +742,12 @@ header .headerTxt .headerContactBtn:hover {
   }
 }
 
+@media (max-width: 600px) {
+  .s1 .imgAboutWrapper .imgAbout {
+    margin-top: 25px;
+  }
+}
+
 .s2 .offerContent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -774,7 +787,6 @@ header .headerTxt .headerContactBtn:hover {
   line-height: 70px;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Fjalla One";
 }
 
 .s2 h2 {
@@ -789,11 +801,11 @@ header .headerTxt .headerContactBtn:hover {
   line-height: 40px;
 }
 
-@media (max-width: 700px) {
-  s2 {
+@media (max-width: 800px) {
+  .s2 {
     width: 90%;
   }
-  s2 .offerContent {
+  .s2 .offerContent {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -806,8 +818,6 @@ header .headerTxt .headerContactBtn:hover {
 
 .s3 {
   margin: 0 auto 20px;
-  padding-left: 30px;
-  padding-right: 30px;
   position: relative;
   text-align: center;
   background: rgba(0, 0, 0, 0.85);
@@ -838,7 +848,6 @@ header .headerTxt .headerContactBtn:hover {
   color: white;
   line-height: 70px;
   text-transform: uppercase;
-  font-family: "Fjalla One";
 }
 
 .s3 h2 {
@@ -969,7 +978,6 @@ header .headerTxt .headerContactBtn:hover {
   color: white;
   line-height: 70px;
   text-transform: uppercase;
-  font-family: "Fjalla One";
 }
 
 .s4 main h2 {
@@ -1090,5 +1098,21 @@ footer div {
   footer {
     font-size: 10px;
   }
+}
+
+.goUp {
+  position: fixed;
+  visibility: hidden;
+  font-size: 15x;
+  bottom: 35px;
+  right: 35px;
+  color: #011001;
+  opacity: 0.1;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.goUpActive {
+  visibility: visible;
 }
 /*# sourceMappingURL=style.css.map */

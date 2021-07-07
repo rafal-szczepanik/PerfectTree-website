@@ -19,6 +19,7 @@ const defaultSet = () => {
   }
 };
 defaultSet();
+
 changeNav = () => {
   if (window.pageYOffset > changeNavHeight) {
     navTel.classList.add("activeNavTel");
@@ -38,12 +39,8 @@ let index = 0;
 
 changePicture = () => {
   const pictures = ["rafnew.jpeg", "pienki.jpg", "1616019682192new.jpeg"];
-
-  pictures.forEach(() => (imgHeader.src = `images/${pictures[index]}`));
-  index++;
-  if (index === pictures.length) {
-    index = 0;
-  }
+  index < pictures.length - 1 ? index++ : (index = 0);
+  imgHeader.src = `images/${pictures[index]}`;
 };
 
 addGoUpBtn = () => {
@@ -53,8 +50,7 @@ addGoUpBtn = () => {
     goUpBtn.classList.add("goUpActive");
     if (opacity >= 0.6) {
       opacity = 0.6;
-    }
-    if (window.pageYOffset > heightBtnAppear) {
+    } else if (window.pageYOffset > heightBtnAppear) {
       goUpBtn.style.opacity = opacity;
     }
   } else if (window.pageYOffset < heightBtnAppear) {
