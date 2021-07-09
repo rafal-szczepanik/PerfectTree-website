@@ -505,6 +505,22 @@ header .headerTxt .headerContactBtn:hover {
   }
 }
 
+@media (min-width: 600px) and (orientation: landscape) {
+  header .headerTxt {
+    padding-top: 40px;
+  }
+  header .headerTxt h1 {
+    font-size: 20px;
+  }
+  header .headerTxt h2 {
+    font-size: 22px;
+    line-height: 15px;
+  }
+  header .headerTxt h3 {
+    font-size: 18px;
+  }
+}
+
 .s1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1154,7 +1170,7 @@ footer {
   font-size: 15x;
   bottom: 35px;
   right: 35px;
-  color: #011001;
+  color: #034f03;
   opacity: 0.1;
   z-index: 9999;
   cursor: pointer;
