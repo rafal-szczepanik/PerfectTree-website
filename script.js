@@ -20,6 +20,7 @@ const defaultSet = () => {
 };
 defaultSet();
 
+const changeNavHeight = 80;
 changeNav = () => {
   if (window.pageYOffset > changeNavHeight) {
     navTel.classList.add("activeNavTel");
@@ -34,15 +35,41 @@ changeNav = () => {
   }
 };
 
-const changeNavHeight = 80;
 let index = 0;
-
 changePicture = () => {
   const pictures = ["rafnew.jpeg", "pienki.jpg", "1616019682192new.jpeg"];
   index < pictures.length - 1 ? index++ : (index = 0);
   imgHeader.src = `images/${pictures[index]}`;
+  addPictureOpacity();
 };
 
+addPictureOpacity = () => {
+  if (index === 0) {
+    setTimeout(() => {
+      imgHeader.classList.add("activeImgHeader");
+    }, 9500);
+    setTimeout(() => {
+      imgHeader.classList.remove("activeImgHeader");
+    }, 500);
+  } else if (index === 1) {
+    setTimeout(() => {
+      imgHeader.classList.add("activeImgHeader");
+    }, 9500);
+
+    setTimeout(() => {
+      imgHeader.classList.remove("activeImgHeader");
+    }, 500);
+  } else if (index === 2) {
+    setTimeout(() => {
+      imgHeader.classList.add("activeImgHeader");
+    }, 9500);
+
+    setTimeout(() => {
+      imgHeader.classList.remove("activeImgHeader");
+    }, 500);
+  }
+};
+addPictureOpacity();
 addGoUpBtn = () => {
   const heightBtnAppear = aboutSection.offsetTop;
   let opacity = window.pageYOffset / heightBtnAppear - 1;

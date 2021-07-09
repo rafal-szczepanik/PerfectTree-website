@@ -319,8 +319,12 @@ header .imgHeader {
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-animation: picture 10s linear infinite;
-          animation: picture 10s linear infinite;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header .activeImgHeader {
+  opacity: 0;
 }
 
 header::after {
@@ -411,36 +415,6 @@ header .headerTxt .headerContactBtn:hover {
   color: #53b32c;
 }
 
-@-webkit-keyframes picture {
-  0% {
-    opacity: 0;
-  }
-  13% {
-    opacity: 1;
-  }
-  87% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes picture {
-  0% {
-    opacity: 0;
-  }
-  13% {
-    opacity: 1;
-  }
-  87% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 @-webkit-keyframes text {
   0% {
     opacity: 0;
@@ -493,19 +467,7 @@ header .headerTxt .headerContactBtn:hover {
   }
 }
 
-@media (max-width: 500px) {
-  header .headerTxt h1 {
-    font-size: 30px;
-  }
-  header .headerTxt h2 {
-    font-size: 35px;
-  }
-  header .headerTxt h3 {
-    font-size: 22px;
-  }
-}
-
-@media (min-width: 600px) and (orientation: landscape) {
+@media (max-width: 750px) and (orientation: landscape) {
   header .headerTxt {
     padding-top: 40px;
   }
@@ -518,6 +480,18 @@ header .headerTxt .headerContactBtn:hover {
   }
   header .headerTxt h3 {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  header .headerTxt h1 {
+    font-size: 30px;
+  }
+  header .headerTxt h2 {
+    font-size: 35px;
+  }
+  header .headerTxt h3 {
+    font-size: 22px;
   }
 }
 
@@ -545,7 +519,6 @@ header .headerTxt .headerContactBtn:hover {
 
 .s1 .infoTxt h1,
 .s1 .infoTxt h2 {
-  border: 1px, solid #333;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: left;
@@ -611,8 +584,8 @@ header .headerTxt .headerContactBtn:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .s1 .imgAboutWrapper .imgAbout .headerAbout {
@@ -651,8 +624,6 @@ header .headerTxt .headerContactBtn:hover {
   background-color: transparent;
   border: 2px solid white;
   border-radius: 25px 25px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
   cursor: pointer;
 }
 

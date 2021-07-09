@@ -20,7 +20,12 @@ header {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    animation: picture 10s linear infinite;
+    transition: 0.5s;
+
+    // animation: picture 10s linear infinite;
+  }
+  .activeImgHeader {
+    opacity: 0;
   }
 
   &::after {
@@ -96,27 +101,27 @@ header {
     }
   }
 }
-@keyframes picture {
-  0% {
-    opacity: 0;
-  }
-  // 8% {
-  //   opacity: 0.8;
-  // }
-  13% {
-    opacity: 1;
-  }
-  87% {
-    opacity: 1;
-  }
+// @keyframes picture {
+//   0% {
+//     opacity: 0;
+//   }
+//   // 8% {
+//   //   opacity: 0.8;
+//   // }
+//   13% {
+//     opacity: 1;
+//   }
+//   87% {
+//     opacity: 1;
+//   }
 
-  // 92% {
-  //   opacity: 0.8;
-  // }
-  100% {
-    opacity: 0;
-  }
-}
+//   // 92% {
+//   //   opacity: 0.8;
+//   // }
+//   100% {
+//     opacity: 0;
+//   }
+// }
 
 @keyframes text {
   0% {
@@ -165,23 +170,7 @@ header {
     }
   }
 }
-@media (max-width: 500px) {
-  header {
-    .headerTxt {
-      h1 {
-        font-size: 30px;
-      }
-      h2 {
-        font-size: 35px;
-        // line-height: 50px;
-      }
-      h3 {
-        font-size: 22px;
-      }
-    }
-  }
-}
-@media (min-width: 600px) and (orientation: landscape) {
+@media (max-width: 750px) and (orientation: landscape) {
   header {
     .headerTxt {
       padding-top: 40px;
@@ -198,3 +187,37 @@ header {
     }
   }
 }
+@media (max-width: 500px) {
+  header {
+    .headerTxt {
+      h1 {
+        font-size: 30px;
+      }
+      h2 {
+        font-size: 35px;
+        // line-height: 50px;
+      }
+      h3 {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+// @media (min-width: 900px) and (orientation: landscape) {
+//   header {
+//     .headerTxt {
+//       padding-top: 40px;
+//       h1 {
+//         font-size: 35px;
+//       }
+//       h2 {
+//         font-size: 40px;
+//         line-height: 50px;
+//       }
+//       h3 {
+//         font-size: 30px;
+//       }
+//     }
+//   }
+// }
