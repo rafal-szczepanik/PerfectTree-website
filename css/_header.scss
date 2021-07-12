@@ -20,9 +20,7 @@ header {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    transition: 0.5s;
-
-    // animation: picture 10s linear infinite;
+    transition: 1s;
   }
   .activeImgHeader {
     opacity: 0;
@@ -101,27 +99,6 @@ header {
     }
   }
 }
-// @keyframes picture {
-//   0% {
-//     opacity: 0;
-//   }
-//   // 8% {
-//   //   opacity: 0.8;
-//   // }
-//   13% {
-//     opacity: 1;
-//   }
-//   87% {
-//     opacity: 1;
-//   }
-
-//   // 92% {
-//   //   opacity: 0.8;
-//   // }
-//   100% {
-//     opacity: 0;
-//   }
-// }
 
 @keyframes text {
   0% {
@@ -154,23 +131,7 @@ header {
   }
 }
 
-@media (max-width: 800px) {
-  header {
-    .headerTxt {
-      h1 {
-        font-size: 30px;
-      }
-      h2 {
-        font-size: 35px;
-        line-height: 55px;
-      }
-      h3 {
-        font-size: 25px;
-      }
-    }
-  }
-}
-@media (max-width: 750px) and (orientation: landscape) {
+@media (max-width: 850px) and (orientation: landscape) {
   header {
     .headerTxt {
       padding-top: 40px;
@@ -195,7 +156,6 @@ header {
       }
       h2 {
         font-size: 35px;
-        // line-height: 50px;
       }
       h3 {
         font-size: 22px;

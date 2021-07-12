@@ -58,17 +58,55 @@ nav {
     width: 250px;
   }
 
-  .hamburgerBtn:hover {
+  .menuBtn:hover {
     transform: scale(1.1);
   }
 }
-.hamburgerBtn {
-  display: none;
-  background-color: transparent;
-  color: white;
-  border: none;
+.menuBtn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
   font-size: 22px;
-  transition: 0.3s;
+  transition: 0.4s;
+
+  .hamburgerBtn {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.4s;
+  }
+
+  .hamburgerBtn::before,
+  .hamburgerBtn::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.4s;
+  }
+  .hamburgerBtn::before {
+    transform: translateY(-8px);
+  }
+  .hamburgerBtn::after {
+    transform: translateY(8px);
+  }
+}
+.menuBtn.open .hamburgerBtn {
+  transform: translateY(-25px);
+  background: transparent;
+}
+.menuBtn.open .hamburgerBtn::before {
+  transform: rotate(45deg) translate(15px, 15px);
+}
+.menuBtn.open .hamburgerBtn::after {
+  transform: rotate(-45deg) translate(-15px, 15px);
 }
 .nav-list {
   padding-right: 90px;

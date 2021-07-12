@@ -1,15 +1,14 @@
 .s4 {
+  min-height: 60vh;
   display: flex;
-
+  width: 100%;
   .infoTxt {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     position: relative;
+    width: 100%;
     background: rgba(0, 0, 0, 0.474);
-
-    flex-basis: 100%;
-
     ::after {
       content: "";
       position: absolute;
@@ -26,8 +25,8 @@
     }
 
     .contact-h1 {
-      flex-basis: 100%;
-
+      margin-bottom: 50px;
+      // flex-basis: 100%;
       .hrLine {
         margin-bottom: 20px;
         background-color: $mainColor;
@@ -41,11 +40,12 @@
   main {
     display: flex;
     width: 35%;
-    height: 80vh;
-    justify-content: space-between;
+    margin: 30px;
+
+    // height: 100vh;
+    // justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0 auto;
 
     h1 {
       font-size: 45px;
@@ -53,40 +53,40 @@
       line-height: 70px;
       text-transform: uppercase;
     }
-
-    h2 {
-      margin: 0 10px;
-      font-size: 20px;
-      color: white;
-      text-align: center;
-      line-height: 100px;
-
-      a {
-        text-decoration: none;
-        color: white;
-      }
+    .contactnum,
+    .contacmail {
+      width: 80%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      background-color: rgba(black, 0.7);
+      // box-shadow: 1px 1px 1px white, -1px -1px 1px white;
+      // border: 1px solid $mainColor;
     }
 
     .fas {
       margin-right: 10px;
     }
   }
+  h2 {
+    font-size: 25px;
+    font-weight: 400;
+    font-family: "roboto";
+    margin: 0 10px;
+    color: $mainColor;
+    text-align: center;
+    line-height: 70px;
 
-  // .contactnum,
-  // .contacmail {
-  //   // padding: 0 70px;
-  //   // height: 150px;
-  //   width: 70%;
-  //   background-color: rgba($mainColor, 0.801);
-  //   box-shadow: 1px 1px 1px white, -1px -1px 1px white;
-  //   text-shadow: $h1-textshadow;
-  // }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
 
   aside {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 90%;
+    // align-items: center;
+    padding: 20px 20px;
     width: 45%;
     .google-maps {
       position: relative;
@@ -104,7 +104,18 @@
     }
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
+  .s4 {
+    main {
+      h1 {
+        font-size: 38px;
+        line-height: 55px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
   .s4 {
     .hrLine {
       margin-top: 20px;
@@ -114,19 +125,28 @@
     main {
       h1 {
         font-size: 35px;
-        text-align: center;
+        line-height: 50px;
+      }
+      .contactnum,
+      .contacmail {
+        width: 90%;
+        h2 {
+          font-size: 23px;
+        }
       }
     }
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 930px) {
   .s4 {
     main {
+      justify-content: center;
       width: 80%;
       h1 {
         font-size: 30px;
-        line-height: 50px;
+        line-height: 40px;
+        text-align: center;
       }
     }
     aside {
@@ -143,6 +163,12 @@
     main {
       h1 {
         line-height: 40px;
+      }
+      .contactnum,
+      .contacmail {
+        h2 {
+          font-size: 19px;
+        }
       }
     }
     aside {

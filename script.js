@@ -6,7 +6,7 @@ const imgHeader = document.querySelector(".imgHeader");
 const imgAbout = document.querySelector(".imgOne");
 const goUpBtn = document.querySelector(".goUp");
 const aboutSection = document.querySelector(".s1");
-const hamburger = document.querySelector(".hamburgerBtn");
+const hamburger = document.querySelector(".menuBtn");
 const navUl = document.querySelector(".nav-list");
 const navWrapper = document.querySelector(".navWrapper");
 const smallNavBtns = document.querySelectorAll(".nav-item");
@@ -47,26 +47,26 @@ addPictureOpacity = () => {
   if (index === 0) {
     setTimeout(() => {
       imgHeader.classList.add("activeImgHeader");
-    }, 9500);
+    }, 9000);
     setTimeout(() => {
       imgHeader.classList.remove("activeImgHeader");
-    }, 500);
+    }, 100);
   } else if (index === 1) {
     setTimeout(() => {
       imgHeader.classList.add("activeImgHeader");
-    }, 9500);
+    }, 9000);
 
     setTimeout(() => {
       imgHeader.classList.remove("activeImgHeader");
-    }, 500);
+    }, 100);
   } else if (index === 2) {
     setTimeout(() => {
       imgHeader.classList.add("activeImgHeader");
-    }, 9500);
+    }, 9000);
 
     setTimeout(() => {
       imgHeader.classList.remove("activeImgHeader");
-    }, 500);
+    }, 100);
   }
 };
 addPictureOpacity();
@@ -89,6 +89,8 @@ goUpFunc = () => {
 };
 
 showSmallNav = () => {
+  hamburger.classList.toggle("open");
+
   navUl.classList.toggle("show");
   navWrapper.classList.toggle("navWrapperActive");
 };

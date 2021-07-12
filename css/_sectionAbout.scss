@@ -125,15 +125,15 @@
         height: 100%;
         width: 100%;
         opacity: 0;
-        -webkit-transition: all 250ms;
-        transition: all 250ms;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
         z-index: -1;
       }
       .images:hover::after {
         background: rgba(24, 49, 13, 0.8);
         opacity: 1;
-        -webkit-transition: all 0.4s;
-        transition: all 0.4s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
       }
 
       .images:hover {
@@ -154,6 +154,9 @@
     .imgAbout:hover .textAbout {
       visibility: visible;
     }
+    // .imgAbout:hover .headerAbout {
+    //   opacity: 1;
+    // }
   }
 }
 @media (max-width: 1350px) {
