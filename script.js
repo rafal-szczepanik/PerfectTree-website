@@ -97,6 +97,7 @@ showSmallNav = () => {
 closeSmallNav = () => {
   setTimeout(() => {
     navUl.classList.remove("show");
+    hamburger.classList.remove("open");
   }, 400);
 };
 
