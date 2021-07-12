@@ -128,9 +128,7 @@ nav {
 
 .menuBtn {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -224,6 +222,8 @@ nav {
   color: #e6e5db;
   text-transform: uppercase;
   letter-spacing: 3px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .nav-list .nav-item .menu:hover {
@@ -263,8 +263,10 @@ nav {
     -webkit-animation: animateLi 0.5s ease calc(var(--i) * 150ms) both;
             animation: animateLi 0.5s ease calc(var(--i) * 150ms) both;
   }
-  .hamburgerBtn {
-    display: block;
+  .menuBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .show {
     height: 200px;
@@ -292,6 +294,16 @@ nav {
   }
   .navWrapper .activeImg {
     width: 200px;
+  }
+}
+
+@media (max-width: 340px) {
+  .navWrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .navWrapper .activeImg {
+    width: 150px;
   }
 }
 

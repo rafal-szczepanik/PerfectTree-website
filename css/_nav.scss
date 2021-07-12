@@ -64,7 +64,7 @@ nav {
 }
 .menuBtn {
   position: relative;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 40px;
@@ -130,9 +130,8 @@ nav {
       text-decoration: none;
       color: #e6e5db;
       text-transform: uppercase;
-      // font-family: "mulish";
       letter-spacing: 3px;
-      // transition: 0.2s;
+      transition: 0.3s;
       &:hover {
         font-weight: 700;
         color: $mainColor;
@@ -173,8 +172,8 @@ nav {
     }
   }
 
-  .hamburgerBtn {
-    display: block;
+  .menuBtn {
+    display: flex;
   }
   .show {
     height: 200px;
@@ -199,6 +198,15 @@ nav {
     }
   }
 }
+@media (max-width: 340px) {
+  .navWrapper {
+    flex-wrap: nowrap;
+    .activeImg {
+      width: 150px;
+    }
+  }
+}
+
 @keyframes animateUp {
   0% {
     opacity: 0;
