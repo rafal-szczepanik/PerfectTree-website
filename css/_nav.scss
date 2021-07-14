@@ -65,7 +65,7 @@ nav {
 .menuBtn {
   position: relative;
   display: none;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 40px;
   height: 40px;
@@ -152,7 +152,7 @@ nav {
     }
   }
   .navWrapper {
-    padding: 5px 50px 5px 25px;
+    padding: 5px 25px;
     transition: 0.3s;
 
     .activeImg {
@@ -198,9 +198,8 @@ nav {
     }
   }
 }
-@media (max-width: 340px) {
+@media (max-width: 350px) {
   .navWrapper {
-    flex-wrap: nowrap;
     .activeImg {
       width: 150px;
     }

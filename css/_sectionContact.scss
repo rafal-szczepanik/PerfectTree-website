@@ -142,11 +142,15 @@
   .s4 {
     main {
       justify-content: center;
-      width: 80%;
+      width: 90%;
       h1 {
         font-size: 30px;
         line-height: 40px;
         text-align: center;
+      }
+      .contactnum,
+      .contacmail {
+        width: 65%;
       }
     }
     aside {
@@ -166,6 +170,7 @@
       }
       .contactnum,
       .contacmail {
+        width: 90%;
         h2 {
           font-size: 19px;
         }

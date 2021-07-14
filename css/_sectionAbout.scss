@@ -36,7 +36,7 @@
   p {
     font-size: 18px;
     margin-top: 10px;
-    line-height: 40px;
+    line-height: 33px;
   }
   .imgAboutWrapper {
     display: flex;
@@ -162,6 +162,7 @@
 @media (max-width: 1350px) {
   .s1 {
     width: 90%;
+
     .infoTxt {
       h2 {
         font-size: 40px;
@@ -180,7 +181,9 @@
   .s1 {
     flex-direction: column;
     text-align: center;
-    width: 85%;
+    padding-left: 5px;
+    padding-right: 5px;
+    // width: 85%;
 
     .hrLine {
       margin-left: auto;
@@ -222,7 +225,7 @@
   .s1 {
     .infoTxt {
       p {
-        font-size: 16px;
+        font-size: 15px;
       }
     }
     .imgAboutWrapper {
