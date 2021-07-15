@@ -811,6 +811,10 @@ header .headerTxt .headerContactBtn:hover {
   }
 }
 
+.s2 {
+  width: 900px;
+}
+
 .s2 .offerContent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -964,7 +968,7 @@ header .headerTxt .headerContactBtn:hover {
 }
 
 .s3 .content article {
-  width: 90%;
+  width: 900px;
 }
 
 @media (max-width: 1024px) {
