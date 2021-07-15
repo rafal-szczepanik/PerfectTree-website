@@ -1,3 +1,16 @@
+const images = new Array();
+function preload() {
+  for (i = 0; i < preload.arguments.length; i++) {
+    images[i] = new Image();
+    images[i].src = preload.arguments[i];
+  }
+}
+preload(
+  "images/rafnew.jpeg",
+  "images/pienki.jpg",
+  "images/1616019682192new.jpeg"
+);
+
 const navTel = document.querySelector(".navTel");
 const navItem = document.querySelector(".navWrapper");
 const logo = document.querySelector(".logo");
