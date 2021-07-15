@@ -50,7 +50,7 @@ changeNav = () => {
 
 let index = 0;
 changePicture = () => {
-  const pictures = ["rafnew.jpeg", "pienki.jpg", "1616019682192new.jpeg"];
+  const pictures = ["1616019682192new.jpeg", "rafnew.jpeg", "pienki.jpg"];
   index < pictures.length - 1 ? index++ : (index = 0);
   imgHeader.src = `images/${pictures[index]}`;
   addPictureOpacity();
